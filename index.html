@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitsune Kodo Collection</title>
+    <!-- Load Tailwind CSS via CDN for fast, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff; /* Sky Blue Light background */
+            color: #1f2937;
+        }
+
+        /* Cherry Blossom Background Accent for Header */
+        header {
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="%23f9fafb" stroke="%23fce7f3" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            background-size: 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        /* Custom flame-like shadow for the main NFT card */
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4), 0 4px 6px rgba(239, 68, 68, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Flame-style button accent */
+        .flame-button {
+            background-color: #ef4444; /* Red */
+            border: 3px solid #f97316; /* Orange accent for flame look */
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .flame-button:hover {
+            background-color: #dc2626; /* Darker Red on hover */
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 min-h-screen">
+
+    <!-- Header Section: Kitsune Kodo Title -->
+    <header class="text-center py-10 mb-12 rounded-xl border border-sky-200 shadow-lg">
+        <h1 class="text-5xl md:text-7xl font-black text-sky-800 leading-tight mb-2">
+            🦊 Kitsune Kodo 🏮
+        </h1>
+        <p class="text-xl md:text-2xl text-red-600 font-semibold max-w-2xl mx-auto">
+            The way of the Fox Spirit — A solitary masterpiece.
+        </p>
+    </header>
+
+    <!-- Main NFT Container (Centered) -->
+    <main class="flex justify-center items-center">
+        
+        <!-- NFT Card for Single Display -->
+        <div class="card-shadow bg-white rounded-xl overflow-hidden shadow-2xl w-full max-w-lg border border-red-300">
+            
+            <!-- NFT Image Area -->
+            <div class="p-4 bg-sky-100 border-b-4 border-red-500">
+                <!-- *** UPDATED PATH: The file is now expected right in the root web folder. *** -->
+                <img class="w-full h-auto object-cover rounded-lg aspect-square" 
+                     src="kitsune.png" 
+                     alt="Kitsune Kodo NFT Masterpiece" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x600/fecaca/93c5fd?text=kitsune.png%0A(Place%20image%20in%20web%20root)'; alert('Image kitsune.png not found. Please place it in /var/www/html/')"
+                >
+            </div>
+
+            <!-- NFT Details -->
+            <div class="p-6">
+                <h2 class="text-3xl font-bold text-sky-700 mb-2 flex items-center justify-between">
+                    Kitsune #001 <span class="text-xl text-red-600 font-extrabold">1.5 ETH</span>
+                </h2>
+                <p class="text-base text-gray-500 mb-4">
+                    The Genesis Piece. Created with traditional brushstrokes and infused with a swirling spiritual flame.
+                </p>
+                
+                <div class="border-t border-sky-100 pt-4 mt-4">
+                    <!-- Marketplace Button with Flame Style -->
+                    <a href="https://opensea.io/collection/kitsune-kodo" target="_blank" 
+                       class="flame-button w-full block text-center py-3 text-white font-bold rounded-xl shadow-lg uppercase tracking-wider">
+                        View on OpenSea Marketplace
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-gray-400">
+        <p class="text-sm">
+            🌸 Hosted by Apache2 on WSL2 | <span class="text-red-500">Kitsune Kodo Collection</span> 🌸
+        </p>
+    </footer>
+
+</body>
+</html>
