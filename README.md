@@ -1,2 +1,2 @@
 # Kitsune_Kodo
-asdasd
+Kitsune_Kodo artwork lies here # GET UR OWN
