@@ -202,10 +202,94 @@ The tool displays:
 - Provides clear error messages for debugging
 - Handles X API errors gracefully
 
-### Muistio (suomeksi)
+---
+
+## 🎨 Kitsune Art Generator CLI
+
+Generate AI-powered Kitsune (fox spirit) artwork using DALL-E 3. Creates unique images based on type and custom specifications, saved in L33t-style filenames to a dedicated folder.
+
+### Setup (same as tweet generator)
+
+Already configured if you ran the tweet generator setup above. Requirements already include `requests` for image downloads.
+
+### Usage
+
+**Generate a Kitsune artwork:**
+```bash
+python kitsune_art_generator.py --type fire
+```
+
+**Generate with custom specs:**
+```bash
+python kitsune_art_generator.py --type dark --specs "9-tailed fox with crimson fur and golden eyes"
+```
+
+**Try different types:**
+```bash
+python kitsune_art_generator.py --type ice
+python kitsune_art_generator.py --type demon
+python kitsune_art_generator.py --type spirit --specs "ethereal white fox with glowing wisps"
+python kitsune_art_generator.py --type sacred --specs "celestial kitsune with divine aura"
+```
+
+### Command-Line Arguments
+
+| Argument | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `--type` | Yes | - | Kitsune type: `fire`, `dark`, `ice`, `demon`, `spirit`, `sacred` |
+| `--specs` | No | - | Custom features/description (e.g., "9-tailed with golden eyes") |
+| `--help` | No | - | Show help message |
+
+### Kitsune Types
+
+- **fire** - Crimson and gold, blazing energy, mystical flames
+- **dark** - Shadow-infused, dark purples and blacks, sinister mystique
+- **ice** - Crystalline blue and white, frosty aura, glacial elegance
+- **demon** - Demonic red and gray, horns and claws, malevolent presence
+- **spirit** - Ethereal white and silver, glowing wisps, divine presence
+- **sacred** - Golden and radiant, holy light, celestial majesty
+
+### Output
+
+- **Location:** `kitsune_art/` folder
+- **Filenames:** L33t-style Kitsune names (e.g., `K1tsun3_fire_20251207_160053.png`)
+- **Format:** PNG, 1024x1024px
+- **Size:** ~1.9MB per image
+
+### Generated Examples
+
+```
+✅ Kuva tallennettu: kitsune_art/G0ld3n_F1r3_fire_20251207_160053.png
+✅ Kuva tallennettu: kitsune_art/T41l_0f_F1r3_ice_20251207_160120.png
+```
+
+### Features
+
+- ✨ DALL-E 3 powered image generation
+- 🎨 6 unique Kitsune types with custom visual styles
+- 🦊 L33t-style filenames for generated images
+- 📁 Dedicated `kitsune_art/` folder for all outputs
+- 💬 Custom specs support for fine-tuning artwork
+- 🎯 Automatic timestamp and type tagging in filenames
+- 🔐 Uses existing OpenAI API key from `.env`
+
+### Notes
+
+- Each image costs OpenAI API credits (DALL-E 3).
+- Images are 1024x1024px, high quality.
+- Filenames are randomized L33t-style Kitsune names with timestamp to avoid duplicates.
+- All files saved to `kitsune_art/` for easy organization.
+
+---
 
 - Asennus: `pip install -r requirements.txt`, kopioi `.env.example` → `.env` ja lisää OpenAI + X (OAuth1) avaimet.
 - X-asetukset: luvat **Read ja Write**, callback `http://127.0.0.1:8080`, Website URL mikä tahansa (esim. OpenSea-linkki).
 - Uusi Access Token & Secret: regeneroi ne vasta, kun Read/Write on päällä.
 - Ajo: `python tweet_generator.py --product kitsune_kodo --tone hype --length short --post` → vastaa `yes` postauskysymykseen.
 - Jos 401/403: tarkista luvat, regeneroi tokenit, varmista että `.env` sisältää viimeisimmät arvot.
+
+#### Kitsune Art Generator
+- Luo AI-taidetta DALL-E 3:lla kuuden eri tyypin Kitsun-eille (fire, dark, ice, demon, spirit, sacred).
+- Ajo: `python kitsune_art_generator.py --type fire --specs "9-tailed fox with golden eyes"`
+- Tiedostot tallennetaan `kitsune_art/` -kansioon L33t-tyyli nimillä (esim. `K1tsun3_fire_20251207_160053.png`).
+- Käyttää samaa OpenAI API-avainta `.env`:stä.
