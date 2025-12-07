@@ -212,6 +212,32 @@ Generate AI-powered Kitsune (fox spirit) artwork using DALL-E 3. Creates unique 
 
 Already configured if you ran the tweet generator setup above. Requirements already include `requests` for image downloads.
 
+### Quick Start Guide
+
+1. **Ensure OpenAI API key is in `.env`** (same key used for tweet generator)
+
+2. **Generate your first Kitsune:**
+   ```bash
+   python kitsune_art_generator.py --type fire
+   ```
+
+3. **Check the output:**
+   - Look in the `kitsune_art/` folder
+   - You'll see a PNG file like: `K1tsun3_fire_20251207_160053.png`
+
+4. **Try with custom specifications:**
+   ```bash
+   python kitsune_art_generator.py --type ice --specs "9-tailed fox with silver fur and sapphire eyes"
+   ```
+
+5. **Experiment with all types:**
+   - `--type fire` → Crimson and gold flames
+   - `--type dark` → Shadow and purple mystique
+   - `--type ice` → Crystalline blue and white frost
+   - `--type demon` → Red and gray with horns
+   - `--type spirit` → Ethereal white and silver
+   - `--type sacred` → Golden and radiant divine light
+
 ### Usage
 
 **Generate a Kitsune artwork:**
