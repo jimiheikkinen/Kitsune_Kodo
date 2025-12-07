@@ -123,7 +123,7 @@ Create tweets that are:
             print(f"\n🦊 Generating {variations} tweet variations for {product_info['name']}...")
         
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": user_prompt if variations == 1 else f"{user_prompt}\n\nGenerate {variations} different variations. Number each tweet (1., 2., 3., etc.)"}
