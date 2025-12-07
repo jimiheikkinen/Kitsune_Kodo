@@ -24,7 +24,7 @@ PRODUCTS = {
     'kitsune_kodo': {
         'name': 'Kitsune Kodo',
         'description': 'A unique NFT collection featuring fox spirit artwork with traditional Japanese aesthetics',
-        'hashtags': ['#KitsuneKodo', '#NFT', '#CryptoArt'],
+        'hashtags': ['#KitsuneKodo', '#NFT', '#CryptoArt', '#NFTCommunity', '#DigitalArt', '#Web3'],
         'url': 'https://opensea.io/collection/kitsune-kodo'
     },
     # Lisää uusia tuotteita tähän tarvittaessa
